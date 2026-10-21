@@ -19,27 +19,27 @@
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="scrolled?'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5':'bg-transparent'">
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="{% url 'home:index' %}" class="font-display font-bold text-xl tracking-tight relative z-10">
+      <a href="index.html" class="font-display font-bold text-xl tracking-tight relative z-10">
         <span class="text-zinc-900 dark:text-white">Mohammad</span><span class="text-accent"> Mosayebi</span>
       </a>
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <li><a href="{% url 'home:index' %}#services"
+        <li><a href="index.html#services"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
         </li>
 
-        <li><a href="{% url 'home:index' %}#about"
+        <li><a href="index.html#about"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
         </li>
 
-        <li><a href="{% url 'home:index' %}#contact"
+        <li><a href="index.html#contact"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a>
         </li>
 
-        <li><a href="{% url 'home:project' %}" class="nav-link text-accent font-medium">Projects</a></li>
+        <li><a href="projects.html" class="nav-link text-accent font-medium">Projects</a></li>
 
-        <li><a href="blog.html"
+        <!-- <li><a href="blog.html"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Blog</a>
-        </li>
+        </li> -->
       </ul>
       <div class="flex items-center gap-3">
         <button @click="dark=!dark;localStorage.setItem('theme',dark?'dark':'light')"
@@ -56,9 +56,9 @@
               d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
           </svg>
         </button>
-        <a href="{% url 'home:index' %}#contact"
-          class="hidden md:inline-flex items-center gap-2 btn-primary bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">Email
-          me &rarr;</a>
+        <a href="media/resume/Mohammad Mosayebi 2026.pdf" download="Mohammad Mosayebi 2026"
+          class="hidden md:inline-flex items-center gap-2 btn-primary bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">My
+          Resume</a>
         <button @click="mobileMenu=!mobileMenu"
           class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800"
           aria-label="Toggle menu">
@@ -79,18 +79,19 @@
       x-transition:leave-end="opacity-0 -translate-y-2"
       class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
       <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
-        <li><a href="{% url 'home:index' %}#services" @click="mobileMenu=false"
+        <li><a href="index.html#services" @click="mobileMenu=false"
             class="block text-zinc-700 dark:text-zinc-300">Services</a></li>
-        <li><a href="{% url 'home:project' %}" class="block text-accent font-medium">Projects</a></li>
-        <li><a href="{% url 'home:index' %}#about" @click="mobileMenu=false"
+        <li><a href="index.html#about" @click="mobileMenu=false"
             class="block text-zinc-700 dark:text-zinc-300">About</a></li>
-        <li><a href="blog.html" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Blog</a></li>
-        <li><a href="{% url 'home:index' %}#contact" @click="mobileMenu=false"
-            class="block text-zinc-700 dark:text-zinc-300">Contact</a></li>
+        <li><a href="index.html#contact" @click="mobileMenu=false"
+            class="block text-zinc-700 dark:text-zinc-300">Contact</a></li>    
+        <li><a href="projects.html" class="block text-accent font-medium">Projects</a></li>
+
+        <!-- <li><a href="blog.html" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Blog</a></li> -->
+        
         <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
-          <a href="mailto:moham.ax1245@gmail.com" @click="mm=false"
-            class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Email
-            me →</a>
+          <a href="media/resume/Mohammad Mosayebi 2026.pdf" download="Mohammad Mosayebi 2026" @click="mm=false"
+            class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">My Resume</a>
         </li>
       </ul>
     </div>
@@ -128,62 +129,42 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {% for port in ports %}
-
           <article class="project-card group h-full rounded-2xl overflow-hidden
              bg-white dark:bg-zinc-900
              border border-zinc-100 dark:border-zinc-800
              hover:border-accent transition-colors">
 
             <!-- Project Image -->
-            <a href="{{ port.url }}" target="_blank" class="block photo-frame w-full h-52">
+            <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank"
+              class="block photo-frame w-full h-52">
 
-              <img src="{{ port.img.url }}" alt="{{ port.title }}" loading="lazy" class="w-full h-full object-cover">
-
+              <img src="media/github/Customer Segmentation.png" alt="Customer Segmentation for Targeted Marketing"
+                loading="lazy" class="w-full h-full object-cover">
             </a>
-
-
             <!-- Card Content -->
             <div class="p-6">
 
               <!-- Categories & Tags -->
               <div class="flex flex-wrap gap-2 mb-3">
 
-                {% for cat in port.category.all %}
-
                 <span class="text-xs px-2.5 py-1 rounded-full
                    bg-orange-50 dark:bg-zinc-800
                    text-accent
                    border border-orange-200 dark:border-zinc-700">
-                  {{ cat }}
+                  Data Analysis
                 </span>
-
-                {% endfor %}
-
-
-                {% for tag in port.tag.all %}
-
-                <span class="text-xs px-2.5 py-1 rounded-full
-                   bg-zinc-100 dark:bg-zinc-800
-                   text-zinc-600 dark:text-zinc-400">
-                  {{ tag }}
-                </span>
-
-                {% endfor %}
-
               </div>
 
 
               <!-- Project Title -->
-              <a href="{{ port.url }}" target="_blank">
+              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank">
 
                 <h3 class="font-display font-bold text-lg
                    text-zinc-900 dark:text-white
                    mb-2
                    group-hover:text-accent
                    transition-colors">
-
-                  {{ port.title }}
+                  Customer Segmentation for Targeted Marketing
 
                 </h3>
 
@@ -193,8 +174,8 @@
               <!-- Description -->
               <p class="text-sm text-zinc-500 dark:text-zinc-400
                  leading-relaxed mb-4">
-
-                {{ port.description }}
+                Applied unsupervised clustering techniques to segment customers by behavior, enabling more targeted
+                marketing strategies and campaign planning.
 
               </p>
 
@@ -202,12 +183,12 @@
               <!-- Bottom -->
               <div class="flex items-center justify-between">
 
-                <a href="{{ port.url }}" target="_blank" class="inline-flex items-center gap-1.5
+                <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank" class="inline-flex items-center gap-1.5
                    text-sm font-medium
                    text-zinc-900 dark:text-white
                    nav-link">
 
-                  View project →
+                  View on GitHub ->
 
                 </a>
 
@@ -216,21 +197,121 @@
             </div>
 
           </article>
+          <article class="project-card group h-full rounded-2xl overflow-hidden
+             bg-white dark:bg-zinc-900
+             border border-zinc-100 dark:border-zinc-800
+             hover:border-accent transition-colors">
 
-          {% empty %}
+            <!-- Project Image -->
+            <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank"
+              class="block photo-frame w-full h-52">
 
-          <div class="col-span-full text-center py-20">
-            <p class="text-zinc-400 text-sm">
-              No projects available yet.
-            </p>
-          </div>
+              <img src="media/github/Customer Purchase History.png" alt="Customer Purchase History Analysis"
+                loading="lazy" class="w-full h-full object-cover">
+            </a>
+            <!-- Card Content -->
+            <div class="p-6">
 
-          {% endfor %}
+              <!-- Categories & Tags -->
+              <div class="flex flex-wrap gap-2 mb-3">
 
+                <span class="text-xs px-2.5 py-1 rounded-full
+                   bg-orange-50 dark:bg-zinc-800
+                   text-accent
+                   border border-orange-200 dark:border-zinc-700">
+                  Data Analysis
+                </span>
+              </div>
+
+
+              <!-- Project Title -->
+              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank">
+
+                <h3 class="font-display font-bold text-lg
+                   text-zinc-900 dark:text-white
+                   mb-2
+                   group-hover:text-accent
+                   transition-colors">
+                  Customer Purchase History Analysis
+                </h3>
+              </a>
+              <!-- Description -->
+              <p class="text-sm text-zinc-500 dark:text-zinc-400
+                 leading-relaxed mb-4">
+                A Python-based data analysis project focused on understanding sales performance, customer behavior,
+                product performance, and purchasing patterns.
+              </p>
+              <!-- Bottom -->
+              <div class="flex items-center justify-between">
+                <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank"
+                  class="inline-flex items-center gap-1.5
+                   text-sm font-medium
+                   text-zinc-900 dark:text-white
+                   nav-link">
+                  View on GitHub ->
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card group h-full rounded-2xl overflow-hidden
+             bg-white dark:bg-zinc-900
+             border border-zinc-100 dark:border-zinc-800
+             hover:border-accent transition-colors">
+
+            <!-- Project Image -->
+            <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank"
+              class="block photo-frame w-full h-52">
+
+              <img src="media/github/House Price Prediction.png" alt="House Price Prediction" loading="lazy"
+                class="w-full h-full object-cover">
+            </a>
+            <!-- Card Content -->
+            <div class="p-6">
+
+              <!-- Categories & Tags -->
+              <div class="flex flex-wrap gap-2 mb-3">
+
+                <span class="text-xs px-2.5 py-1 rounded-full
+                   bg-orange-50 dark:bg-zinc-800
+                   text-accent
+                   border border-orange-200 dark:border-zinc-700">
+                  Data Analysis
+                </span>
+              </div>
+
+
+              <!-- Project Title -->
+              <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank">
+
+                <h3 class="font-display font-bold text-lg
+                   text-zinc-900 dark:text-white
+                   mb-2
+                   group-hover:text-accent
+                   transition-colors">
+                  House Price Prediction
+                </h3>
+              </a>
+              <!-- Description -->
+              <p class="text-sm text-zinc-500 dark:text-zinc-400
+                 leading-relaxed mb-4">
+                A machine learning project focused on house price prediction using Python. Includes data cleaning,
+                exploratory data analysis, outlier detection, and regression modeling with Scikit-learn and PyCaret to
+                compare model performance and evaluate prediction accuracy.
+              </p>
+              <!-- Bottom -->
+              <div class="flex items-center justify-between">
+                <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank"
+                  class="inline-flex items-center gap-1.5
+                   text-sm font-medium
+                   text-zinc-900 dark:text-white
+                   nav-link">
+                  View on GitHub ->
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
-
       </div>
-
     </section>
 
     <!-- CTA -->
@@ -276,7 +357,7 @@
               building and let's see if we're a good fit.
             </p>
 
-            <a href="{% url 'home:index' %}#contact" class="inline-flex items-center gap-2
+            <a href="index.html#contact" class="inline-flex items-center gap-2
                btn-primary bg-accent text-white
                font-medium px-8 py-3.5
                rounded-full
@@ -299,7 +380,7 @@
 
   <footer class="border-t border-zinc-100 dark:border-zinc-900">
     <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-zinc-400">© <span id="yr"></span> Mohammad Mosayebi. All rights reserved.
+      <p class="text-sm text-zinc-400">© 2026<span id="yr"></span> Mohammad Mosayebi. All rights reserved.
 
       </p>
     </div>
