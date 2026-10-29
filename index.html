@@ -41,26 +41,29 @@
     </a>
 
     <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
-      <li><a href="#services"
-          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          :class="s==='services'?'on !text-zinc-900 dark:!text-white':''">Services</a></li>
-
       <li><a href="#about"
-          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          :class="s==='about'?'on !text-zinc-900 dark:!text-white':''">About</a></li>
+          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
+      </li>
+
+      <li><a href="#projects"
+          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Projects</a>
+      </li>
+
+      <li><a href="#services"
+          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+      </li>
+
+      <li><a href="#experience"
+          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Experience</a>
+      </li>
+
+      <li><a href="#education"
+          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Education</a>
+      </li>
 
       <li><a href="#contact"
-          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          :class="s==='contact'?'on !text-zinc-900 dark:!text-white':''">Contact</a></li>
-
-      <li><a href="projects.html"
-          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          :class="s==='work'?'on !text-zinc-900 dark:!text-white':''">Projects</a></li>
-
-      <!-- <li><a href="#blog"
-          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          :class="s==='blog'?'on !text-zinc-900 dark:!text-white':''">Blog</a></li> -->
-
+          class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a>
+      </li>
     </ul>
 
     <div class="flex items-center gap-3">
@@ -103,17 +106,26 @@
     x-transition:leave-end="opacity-0 -translate-y-2"
     class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
     <ul class="flex flex-col px-6 py-5 gap-4 text-sm font-medium" role="list">
-      <li><a href="#services" @click="mm=false"
-          class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Services</a></li>
 
       <li><a href="#about" @click="mm=false"
           class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">About</a></li>
 
+      <li><a href="#projects" @click="mm=false"
+          class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Projects</a></li>
+
+      <li><a href="#services" @click="mm=false"
+          class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Services</a></li>
+
+      <li><a href="#experience" @click="mm=false"
+          class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Experience</a></li>
+
+      <li><a href="#education" @click="mm=false"
+          class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Education</a></li>
+
       <li><a href="#contact" @click="mm=false"
           class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Contact</a></li>
 
-      <li><a href="projects.html" @click="mm=false"
-          class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Projects</a></li>
+
       <!-- 
       <li><a href="#blog" @click="mm=false"
           class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Blog</a></li> -->
@@ -191,6 +203,175 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+
+          <div class="reveal order-2 md:order-1">
+            <div class="pf w-full aspect-square max-w-sm mx-auto rounded-3xl">
+              <img src="static/img/programmer.png" alt="Mohammad Mosayebi" loading="lazy">
+            </div>
+          </div>
+
+          <div class="order-1 md:order-2">
+            <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">About me</p>
+            <h2
+              class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">
+              A bit about me</h2>
+            <p class="reveal d2 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
+              Data-driven analyst with 3+ years of experience transforming sales,
+              marketing, and customer data into clear, actionable insights for cross-functional teams.
+              Proven track record of building reporting systems and interactive dashboards using Python,
+              Power BI, and SQL Server, paired with hands-on machine learning experience in
+              classification, clustering, and churn prediction. Combines strong business communication
+              skills with a growing focus on data science and predictive analytics to support faster,
+              smarter decision-making.
+            </p>
+            <div class="reveal d4">
+              <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">Stack &amp;
+                tools</p>
+              <div class="flex flex-wrap gap-2" role="list" aria-label="Skills">
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Microsoft
+                  Excel</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Microsoft
+                  Powerpoint</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Python</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Microsoft
+                  Power BI</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Looker
+                  Studio</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">T-SQL</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Executive
+                  & Interactive Dashboards</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Sales
+                  Forecasting</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Customer
+                  Segmentation</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Churn
+                  Prediction</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Sales
+                  & Marketing Analytics</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Customer
+                  Behavior Analysis</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Data-Driven
+                  Decision Support</span>
+                <span role="listitem"
+                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Exploratory
+                  Data Analysis (EDA)</span>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WORK ═══ -->
+    <section id="projects" class="py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+          <div>
+            <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Portfolio</p>
+            <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">
+              Projects</h2>
+          </div>
+          <a href="projects.html"
+            class="reveal d1 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-accent transition-colors self-start sm:self-auto nl">All
+            projects →</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article
+            class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent max-w-sm">
+            <div class="pf w-full h-48">
+              <img src="media/github/Customer Segmentation.png" alt="Finlo Fintech App" loading="lazy" height="2px">
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span
+                  class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data
+                  Analysis</span>
+              </div>
+              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank">
+                <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Customer Segmentation
+                  for Targeted Marketing
+                </h3>
+              </a>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Applied unsupervised clustering
+                techniques to segment customers by behavior, enabling more targeted marketing strategies and campaign
+                planning.</p>
+              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank"
+                class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View on
+                GitHub -></a>
+            </div>
+          </article>
+          <article
+            class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent max-w-sm">
+            <div class="pf w-full h-48">
+              <img src="media/github/Customer Purchase History.png" alt="Finlo Fintech App" loading="lazy" height="2px">
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span
+                  class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data
+                  Analysis</span>
+              </div>
+              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank">
+                <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Customer Purchase
+                  History Analysis
+                </h3>
+              </a>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">A Python-based data analysis
+                project focused on understanding sales performance, customer behavior, product performance, and
+                purchasing patterns.</p>
+              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank"
+                class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View on
+                GitHub -></a>
+            </div>
+          </article>
+          <article
+            class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent max-w-sm">
+            <div class="pf w-full h-48">
+              <img src="media/github/House Price Prediction.png" alt="Finlo Fintech App" loading="lazy" height="2px">
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span
+                  class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data
+                  Analysis</span>
+              </div>
+              <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank">
+                <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">House Price Prediction
+                </h3>
+              </a>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">A machine learning project
+                focused on house price prediction using Python. Includes data cleaning, exploratory data analysis,
+                outlier detection, and regression modeling with Scikit-learn and PyCaret to compare model performance
+                and evaluate prediction accuracy.</p>
+              <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank"
+                class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View on
+                GitHub -></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -299,166 +480,92 @@
       </div>
     </section>
 
-    <!-- ═══ WORK ═══ -->
-    <section id="projects" class="py-24">
+    <!-- ═══ WORK EXPERIENCE ═══ -->
+    <section id="experience" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
-          <div>
-            <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Portfolio</p>
-            <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">
-              Projects</h2>
-          </div>
-          <a href="projects.html"
-            class="reveal d1 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-accent transition-colors self-start sm:self-auto nl">All
-            projects →</a>
+        <div class="mb-14">
+          <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Career journey</p>
+          <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Work
+            Experience</h2>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article
-            class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent max-w-sm">
-            <div class="pf w-full h-48">
-              <img src="media/github/Customer Segmentation.png" alt="Finlo Fintech App" loading="lazy" height="2px">
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-2 mb-3">
-                <span
-                  class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data
-                  Analysis</span>
-              </div>
-              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank">
-                <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Customer Segmentation for Targeted Marketing
-                </h3>
-              </a>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Applied unsupervised clustering techniques to segment customers by behavior, enabling more targeted marketing strategies and campaign planning.</p>
-              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer%20Segmentation" target="_blank"
-                class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View on
-                GitHub -></a>
+        <div class="relative ml-2 md:ml-4 border-l-2 border-zinc-200 dark:border-zinc-800 pl-7 md:pl-10 space-y-10">
+          <article class="reveal relative">
+            <span
+              class="absolute -left-[2.15rem] md:-left-[2.65rem] top-1 w-4 h-4 rounded-full bg-accent ring-4 ring-white dark:ring-zinc-950"
+              aria-hidden="true"></span>
+            <div
+              class="bg-white dark:bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
+              <p class="text-xs font-medium text-accent tracking-widest uppercase mb-2">Aug 2023 – Present
+              </p>
+              <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1">Senior Data Analyst</h3>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-4">Tarh Ideh BTL Agency</p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Data Analyst experienced in BTL
+                campaign performance analysis, KPI dashboard development, and SEO analytics using Power BI, Looker
+                Studio, and statistical methods. Collaborates with cross-functional teams to deliver data-driven
+                insights, optimize marketing strategies, and improve reporting efficiency.</p>
             </div>
           </article>
-          <article
-            class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent max-w-sm">
-            <div class="pf w-full h-48">
-              <img src="media/github/Customer Purchase History.png" alt="Finlo Fintech App" loading="lazy" height="2px">
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-2 mb-3">
-                <span
-                  class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data
-                  Analysis</span>
-              </div>
-              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank">
-                <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Customer Purchase History Analysis
-                </h3>
-              </a>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">A Python-based data analysis project focused on understanding sales performance, customer behavior, product performance, and purchasing patterns.</p>
-              <a href="https://github.com/MMosayebi/Projects/tree/main/Customer-Purchase-History" target="_blank"
-                class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View on
-                GitHub -></a>
-            </div>
-          </article>
-          <article
-            class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent max-w-sm">
-            <div class="pf w-full h-48">
-              <img src="media/github/House Price Prediction.png" alt="Finlo Fintech App" loading="lazy" height="2px">
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-2 mb-3">
-                <span
-                  class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data
-                  Analysis</span>
-              </div>
-              <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank">
-                <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">House Price Prediction
-                </h3>
-              </a>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">A machine learning project focused on house price prediction using Python. Includes data cleaning, exploratory data analysis, outlier detection, and regression modeling with Scikit-learn and PyCaret to compare model performance and evaluate prediction accuracy.</p>
-              <a href="https://github.com/MMosayebi/Projects/tree/main/House%20Price%20Prediction" target="_blank"
-                class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View on
-                GitHub -></a>
+          <article class="reveal relative">
+            <span
+              class="absolute -left-[2.15rem] md:-left-[2.65rem] top-1 w-4 h-4 rounded-full bg-accent ring-4 ring-white dark:ring-zinc-950"
+              aria-hidden="true"></span>
+            <div
+              class="bg-white dark:bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
+              <p class="text-xs font-medium text-accent tracking-widest uppercase mb-2">Dec 2022</p>
+              <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1">Business Intelligence Intern
+              </h3>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-4">adeh Pardazan Ertebat Gostar Viuna</p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Developed foundational skills in
+                business intelligence, data analysis, and reporting. Created interactive Power BI dashboards and
+                optimized SQL Server queries to support data-driven decision-making.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ═══ ABOUT ═══ -->
-    <section id="about" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+    <!-- ═══ UNIVERSITY DEGREES ═══ -->
+    <section id="education" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-
-          <div class="reveal order-2 md:order-1">
-            <div class="pf w-full aspect-square max-w-sm mx-auto rounded-3xl">
-              <img src="static/img/programmer.png" alt="Mohammad Mosayebi" loading="lazy">
+        <div class="mb-14">
+          <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Academic background</p>
+          <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">University
+            Degrees</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <article
+            class="reveal d1 bg-white dark:bg-zinc-900 rounded-2xl p-7 md:p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 text-accent"
+              aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5zm0 0v7m-7-10v5c3 3 11 3 14 0v-5" />
+              </svg>
             </div>
-          </div>
-
-          <div class="order-1 md:order-2">
-            <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">About me</p>
-            <h2
-              class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">
-              A bit about me</h2>
-            <p class="reveal d2 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
-              Data-driven analyst with 3+ years of experience transforming sales,
-              marketing, and customer data into clear, actionable insights for cross-functional teams.
-              Proven track record of building reporting systems and interactive dashboards using Python,
-              Power BI, and SQL Server, paired with hands-on machine learning experience in
-              classification, clustering, and churn prediction. Combines strong business communication
-              skills with a growing focus on data science and predictive analytics to support faster,
-              smarter decision-making.
-            </p>
-            <div class="reveal d4">
-              <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">Stack &amp;
-                tools</p>
-              <div class="flex flex-wrap gap-2" role="list" aria-label="Skills">
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Microsoft
-                  Excel</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Microsoft
-                  Powerpoint</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Python</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Microsoft
-                  Power BI</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Looker
-                  Studio</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">T-SQL</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Executive
-                  & Interactive Dashboards</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Sales
-                  Forecasting</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Customer
-                  Segmentation</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Churn
-                  Prediction</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Sales
-                  & Marketing Analytics</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Customer
-                  Behavior Analysis</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Data-Driven
-                  Decision Support</span>
-                <span role="listitem"
-                  class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Exploratory
-                  Data Analysis (EDA)</span>
-
-              </div>
+            <p class="text-xs font-medium text-accent tracking-widest uppercase mb-2">Sep 2021 - Jan 2026</p>
+            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-2">Bachelor of Computer Science
+            </h3>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400">Payam Noor University · Tehran, Iran</p>
+          </article>
+          <article
+            class="reveal d2 bg-white dark:bg-zinc-900 rounded-2xl p-7 md:p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 text-accent"
+              aria-hidden="true">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5zm0 0v7m-7-10v5c3 3 11 3 14 0v-5" />
+              </svg>
             </div>
-          </div>
-
+            <p class="text-xs font-medium text-accent tracking-widest uppercase mb-2">Expected Sep 2026</p>
+            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-2">Master of Systems Theory
+            </h3>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400">Islamic Azad University · Tehran, Iran</p>
+          </article>
         </div>
       </div>
     </section>
-
 
     <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="py-24">

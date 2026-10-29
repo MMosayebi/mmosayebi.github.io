@@ -23,23 +23,24 @@
         <span class="text-zinc-900 dark:text-white">Mohammad</span><span class="text-accent"> Mosayebi</span>
       </a>
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <li><a href="index.html#services"
-            class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
-        </li>
-
         <li><a href="index.html#about"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
         </li>
-
+        <li><a href="#"
+            class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Projects</a>
+        </li>
+        <li><a href="index.html#services"
+            class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+        </li>
+        <li><a href="index.html#experience"
+            class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Experience</a>
+        </li>
+        <li><a href="index.html#education"
+            class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Education</a>
+        </li>
         <li><a href="index.html#contact"
             class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a>
         </li>
-
-        <li><a href="projects.html" class="nav-link text-accent font-medium">Projects</a></li>
-
-        <!-- <li><a href="blog.html"
-            class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Blog</a>
-        </li> -->
       </ul>
       <div class="flex items-center gap-3">
         <button @click="dark=!dark;localStorage.setItem('theme',dark?'dark':'light')"
@@ -79,16 +80,20 @@
       x-transition:leave-end="opacity-0 -translate-y-2"
       class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
       <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
-        <li><a href="index.html#services" @click="mobileMenu=false"
-            class="block text-zinc-700 dark:text-zinc-300">Services</a></li>
+
         <li><a href="index.html#about" @click="mobileMenu=false"
             class="block text-zinc-700 dark:text-zinc-300">About</a></li>
+        <li><a href="#" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Projects</a></li>
+        <li><a href="index.html#services" @click="mobileMenu=false"
+            class="block text-zinc-700 dark:text-zinc-300">Services</a></li>
+        <li><a href="index.html#experience" @click="mobileMenu=false"
+            class="block text-zinc-700 dark:text-zinc-300">Experience</a></li>
+        <li><a href="index.html#education" @click="mobileMenu=false"
+            class="block text-zinc-700 dark:text-zinc-300">Education</a></li>
         <li><a href="index.html#contact" @click="mobileMenu=false"
-            class="block text-zinc-700 dark:text-zinc-300">Contact</a></li>    
-        <li><a href="projects.html" class="block text-accent font-medium">Projects</a></li>
+            class="block text-zinc-700 dark:text-zinc-300">Contact</a></li>
 
-        <!-- <li><a href="blog.html" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Blog</a></li> -->
-        
+
         <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
           <a href="media/resume/Mohammad Mosayebi 2026.pdf" download="Mohammad Mosayebi 2026" @click="mm=false"
             class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">My Resume</a>
@@ -101,7 +106,7 @@
 
     <!-- Page Header -->
 
-    <section class="pt-36 pb-12 relative overflow-hidden">
+    <section class="pt-36 pb-12 relative overflow-hidden" id="projects">
       <div class="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl pointer-events-none"> </div>
 
       <div class="max-w-6xl mx-auto px-6 relative z-10">
